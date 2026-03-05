@@ -88,3 +88,11 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+
+flutter_native_splash:
+  # FOR ALL PLATFORM, except Android 12+:
+  color: "#FFFFFF" 
+  image: assets/images/splash.png
+
+  # ANDROID 12+ configuration:
+  android_12:
