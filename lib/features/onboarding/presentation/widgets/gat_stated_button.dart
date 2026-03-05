@@ -22,7 +22,7 @@ class GatStatedButton extends StatelessWidget {
           ),
         ),
       ),
-      child: Text('Get Stated', style: TextStyles.font16WhiteSemiBold),
+      child: Text('Get Stated', style: TextStyles.font16WhiteSemiBold()),
     );
   }
 }
