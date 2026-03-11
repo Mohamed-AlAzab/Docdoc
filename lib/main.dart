@@ -8,4 +8,3 @@ void main() {
   setupGetIt();
   runApp(DocApp(router: AppRouter()));
 }
-  
