@@ -36,11 +36,27 @@ class AppTextStyles {
     );
   }
 
+  static TextStyle font14BlueSemiBold() {
+    return TextStyle(
+      fontSize: 14.sp,
+      fontWeight: FontWeightHelper.semiBold,
+      color: AppColors.primry,
+    );
+  }
+
   static TextStyle font13BlueSemiBold() {
     return TextStyle(
       fontSize: 13.sp,
       fontWeight: FontWeightHelper.semiBold,
       color: AppColors.primry,
+    );
+  }
+
+  static TextStyle font15DarkBlueMedium() {
+    return TextStyle(
+      fontSize: 15.sp,
+      fontWeight: FontWeightHelper.medium,
+      color: AppColors.darkBlue,
     );
   }
 
