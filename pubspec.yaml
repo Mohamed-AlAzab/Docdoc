@@ -28,6 +28,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  build_runner: ^2.12.2
   cupertino_icons: ^1.0.8
   dio: ^5.9.1
   easy_localization: ^3.0.8
@@ -89,14 +90,13 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
-
 flutter_native_splash:
   # FOR ALL PLATFORM, except Android 12+:
-  color: "#FFFFFF" 
+  color: "#FFFFFF"
   image: assets/images/splash.png
 
   # ANDROID 12+ configuration:
   android_12:
     color: "#FFFFFF"
-    image: assets/images/android12splash.png    
+    image: assets/images/android12splash.png
     icon_background_color: "#FFFFFF"
