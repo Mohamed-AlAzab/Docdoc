@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_advanced/core/helpers/navigation_extention.dart';
 import 'package:flutter_advanced/core/routing/routes.dart';
 import 'package:flutter_advanced/core/theme/app_colors.dart';
-import 'package:flutter_advanced/core/theme/styles.dart';
+import 'package:flutter_advanced/core/theme/app_text_styles.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class GatStatedButton extends StatelessWidget {
@@ -22,7 +22,7 @@ class GatStatedButton extends StatelessWidget {
           ),
         ),
       ),
-      child: Text('Get Stated', style: TextStyles.font16WhiteSemiBold()),
+      child: Text('Get Stated', style: AppTextStyles.font16WhiteMedium()),
     );
   }
 }
