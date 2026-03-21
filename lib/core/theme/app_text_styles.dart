@@ -36,6 +36,14 @@ class AppTextStyles {
     );
   }
 
+  static TextStyle font18DarkBlueSemiBold() {
+    return TextStyle(
+      fontSize: 18.sp,
+      fontWeight: FontWeightHelper.semiBold,
+      color: AppColors.darkBlue,
+    );
+  }
+
   static TextStyle font16WhiteSemiBold() {
     return TextStyle(
       fontSize: 16.sp,
@@ -81,6 +89,14 @@ class AppTextStyles {
       fontSize: 13.sp,
       fontWeight: FontWeightHelper.medium,
       color: AppColors.darkBlue,
+    );
+  }
+
+  static TextStyle font12GrayMedium() {
+    return TextStyle(
+      fontSize: 12.sp,
+      fontWeight: FontWeightHelper.medium,
+      color: AppColors.gray,
     );
   }
 
@@ -153,6 +169,14 @@ class AppTextStyles {
       fontSize: 12.sp,
       fontWeight: FontWeightHelper.regular,
       color: AppColors.primry,
+    );
+  }
+
+  static TextStyle font12DarkBlueRegular() {
+    return TextStyle(
+      fontSize: 12.sp,
+      fontWeight: FontWeightHelper.regular,
+      color: AppColors.darkBlue,
     );
   }
 }

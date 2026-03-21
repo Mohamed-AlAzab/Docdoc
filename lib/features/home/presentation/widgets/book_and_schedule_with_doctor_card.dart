@@ -58,10 +58,11 @@ class BookAndScheduleWithDoctorCard extends StatelessWidget {
           ),
           Positioned(
             right: 4.w,
+            top: 0,
             child: Image.asset(
               'assets/images/home_doctor.png',
               width: 207.w,
-              height: 207.h,
+              height: 208.h,
             ),
           ),
         ],
