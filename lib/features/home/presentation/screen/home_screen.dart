@@ -30,7 +30,7 @@ class HomeScreen extends StatelessWidget {
               const DoctorSpecialityListVeiw(),
               verticalSpacing(24),
               // const SeeAll(title: 'Recommendation Doctor'),
-              const RecommendationDoctorListView(),
+              const DoctorListView(),
             ],
           ),
         ),

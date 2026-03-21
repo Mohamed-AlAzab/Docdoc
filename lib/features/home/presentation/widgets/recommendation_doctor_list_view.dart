@@ -3,8 +3,8 @@ import 'package:flutter_advanced/core/helpers/spacing.dart';
 import 'package:flutter_advanced/core/theme/app_text_styles.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class RecommendationDoctorListView extends StatelessWidget {
-  const RecommendationDoctorListView({super.key});
+class DoctorListView extends StatelessWidget {
+  const DoctorListView({super.key});
 
   @override
   Widget build(BuildContext context) {
