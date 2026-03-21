@@ -23,7 +23,7 @@ class HomeTopBar extends StatelessWidget {
             ),
           ],
         ),
-        Spacer(),
+        const Spacer(),
         Container(
           width: 48.w,
           height: 48.h,
@@ -31,7 +31,7 @@ class HomeTopBar extends StatelessWidget {
             shape: BoxShape.circle,
             color: AppColors.moreLighterGray,
           ),
-          padding: EdgeInsets.all(12),
+          padding: EdgeInsets.all(12.r),
           child: SvgPicture.asset('assets/svgs/notification.svg'),
         ),
       ],

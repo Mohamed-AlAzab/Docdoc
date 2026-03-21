@@ -4,19 +4,19 @@ import 'package:flutter_advanced/core/theme/font_weight_helper.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppTextStyles {
-  static TextStyle font24BlackBold() {
-    return TextStyle(
-      fontSize: 24.sp,
-      fontWeight: FontWeightHelper.bold,
-      color: Colors.black,
-    );
-  }
-
   static TextStyle font32BlueBold() {
     return TextStyle(
       fontSize: 32.sp,
       fontWeight: FontWeightHelper.bold,
       color: AppColors.primry,
+    );
+  }
+
+  static TextStyle font24BlackBold() {
+    return TextStyle(
+      fontSize: 24.sp,
+      fontWeight: FontWeightHelper.bold,
+      color: Colors.black,
     );
   }
 
@@ -84,6 +84,14 @@ class AppTextStyles {
     );
   }
 
+  static TextStyle font18WhiteMedium() {
+    return TextStyle(
+      fontSize: 18.sp,
+      fontWeight: FontWeightHelper.medium,
+      color: Colors.white,
+    );
+  }
+
   static TextStyle font16WhiteMedium() {
     return TextStyle(
       fontSize: 16.sp,
@@ -135,6 +143,14 @@ class AppTextStyles {
   static TextStyle font13BlueRegular() {
     return TextStyle(
       fontSize: 13.sp,
+      fontWeight: FontWeightHelper.regular,
+      color: AppColors.primry,
+    );
+  }
+
+  static TextStyle font12BlueRegular() {
+    return TextStyle(
+      fontSize: 12.sp,
       fontWeight: FontWeightHelper.regular,
       color: AppColors.primry,
     );
