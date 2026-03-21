@@ -28,6 +28,14 @@ class AppTextStyles {
     );
   }
 
+  static TextStyle font18DarkBlueBold() {
+    return TextStyle(
+      fontSize: 18.sp,
+      fontWeight: FontWeightHelper.bold,
+      color: AppColors.darkBlue,
+    );
+  }
+
   static TextStyle font16WhiteSemiBold() {
     return TextStyle(
       fontSize: 16.sp,
@@ -111,6 +119,14 @@ class AppTextStyles {
   static TextStyle font13GrayRegular() {
     return TextStyle(
       fontSize: 13.sp,
+      fontWeight: FontWeightHelper.regular,
+      color: AppColors.gray,
+    );
+  }
+
+  static TextStyle font12GrayRegular() {
+    return TextStyle(
+      fontSize: 12.sp,
       fontWeight: FontWeightHelper.regular,
       color: AppColors.gray,
     );

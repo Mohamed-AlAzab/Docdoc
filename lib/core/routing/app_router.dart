@@ -5,7 +5,7 @@ import 'package:flutter_advanced/features/auth/presentation/cubit/login/login_cu
 import 'package:flutter_advanced/features/auth/presentation/cubit/sign_up/sign_up_cubit.dart';
 import 'package:flutter_advanced/features/auth/presentation/screens/login_screen.dart';
 import 'package:flutter_advanced/features/auth/presentation/screens/sign_up_screen.dart';
-import 'package:flutter_advanced/features/home/home_screen.dart';
+import 'package:flutter_advanced/features/home/presentation/screen/home_screen.dart';
 import 'package:flutter_advanced/features/onboarding/presentation/onboarding_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
