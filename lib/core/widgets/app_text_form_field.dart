@@ -74,7 +74,7 @@ class AppTextFormField extends StatelessWidget {
           return AppColors.lighterGray;
         }),
         filled: true,
-        fillColor: backgroundColor ?? AppColors.secondaryForm,
+        fillColor: backgroundColor ?? AppColors.moreLightGray,
       ),
       obscureText: isObscureText ?? false,
       style: inputTextStyle ?? AppTextStyles.font14DarkBlueMedium(),
