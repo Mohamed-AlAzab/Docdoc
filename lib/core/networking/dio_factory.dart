@@ -1,5 +1,10 @@
+// ignore_for_file: avoid_print
+
 import 'package:dio/dio.dart';
+import 'package:flutter_advanced/core/helpers/shared_preferences_helper.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
+
+import '../helpers/constants.dart';
 
 class DioFactory {
   /// private constructor as I don't want to allow creating an instance of this class
@@ -27,7 +32,7 @@ class DioFactory {
     dio?.options.headers = {
       'Accept': 'application/json',
       'Authorization':
-          'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3ZjYXJlLmludGVncmF0aW9uMjUuY29tL2FwaS9hdXRoL2xvZ2luIiwiaWF0IjoxNzc0MTk2NzgyLCJleHAiOjE3NzQyODMxODIsIm5iZiI6MTc3NDE5Njc4MiwianRpIjoiSWtJY3NneWpQRGhLa0hHMSIsInN1YiI6IjY3MDQiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.FhRGcalr-dwqGnj6HCaXo7zLbZIz7jmXHLeM7Jfzpk4',
+          'Bearer ${await SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken)}',
     };
   }
 
