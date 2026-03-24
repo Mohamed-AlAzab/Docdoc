@@ -7,3 +7,8 @@ extension ListX<T> on List<T>? {
   // ignore: unnecessary_null_comparison
   bool isNullOrEmpty() => this == null || this!.isEmpty;
 }
+
+extension MapX<K, Y> on Map<K, Y>? {
+  // ignore: unnecessary_null_comparison
+  bool isNullOrEmpty() => this == null || this!.isEmpty;
+}

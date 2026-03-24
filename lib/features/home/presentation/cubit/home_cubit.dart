@@ -1,9 +1,10 @@
-import 'package:flutter_advanced/core/helpers/string_and_list_extention.dart';
+import 'package:flutter_advanced/core/helpers/extention.dart';
 import 'package:flutter_advanced/core/networking/api_result.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../core/networking/api_error_handler.dart';
+import '../../../../core/networking/api_error_model.dart';
 import '../../data/model/specializations_response_model.dart';
 import '../../domain/home_repo.dart';
 
@@ -42,7 +43,7 @@ class HomeCubit extends Cubit<HomeState> {
     if (!doctorsList.isNullOrEmpty()) {
       emit(HomeState.doctorsSuccess(doctorsList));
     } else {
-      emit(HomeState.doctorsError(ErrorHandler.handle('No Doctos found')));
+      emit(HomeState.doctorsError(ApiErrorHandler.handle('No Doctos found')));
     }
   }
 
