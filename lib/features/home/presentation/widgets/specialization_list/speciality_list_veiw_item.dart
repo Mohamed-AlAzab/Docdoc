@@ -44,7 +44,7 @@ class SpecialityListVeiwItem extends StatelessWidget {
               ),
             ),
           ),
-          verticalSpacing(8),
+          verticalSpacing(isSelected ? 5 : 8),
           Text(
             specialization!.name ?? '',
             style: AppTextStyles.font12DarkBlueRegular().copyWith(
