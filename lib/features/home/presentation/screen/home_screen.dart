@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_advanced/features/home/presentation/widgets/book_and_schedule_with_doctor_card.dart';
-import 'package:flutter_advanced/features/home/presentation/widgets/home_top_bar.dart';
-import 'package:flutter_advanced/features/home/presentation/widgets/see_all.dart';
-import 'package:flutter_advanced/features/home/presentation/widgets/specialization_and_doctors_bloc_builder.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../widgets/doctos_list/doctros_bloc_builder.dart';
+import '../widgets/specialization_list/specialization_bloc_builder.dart';
 import '../../../../core/helpers/spacing.dart';
+import '../widgets/book_and_schedule_with_doctor_card.dart';
+import '../widgets/home_top_bar.dart';
+import '../widgets/see_all.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -26,7 +27,9 @@ class HomeScreen extends StatelessWidget {
               verticalSpacing(24),
               const SeeAll(title: 'Doctor Speciality'),
               verticalSpacing(12),
-              SpecializationAndDoctorsBlocBuilder(),
+              const SpecializationBlocBuilder(),
+              verticalSpacing(8),
+              const DoctorsBlocBuilder(),
             ],
           ),
         ),

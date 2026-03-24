@@ -1,3 +1,4 @@
+import 'package:flutter_advanced/core/helpers/string_and_list_extention.dart';
 import 'package:flutter_advanced/core/networking/api_result.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -20,11 +21,34 @@ class HomeCubit extends Cubit<HomeState> {
     final response = await _homeRepo.getSpecializations();
     response.when(
       success: (specializationsResponseModel) {
-        emit(HomeState.specializationsSuccess(specializationsResponseModel));
+        specializationsList =
+            specializationsResponseModel.specializationDataList ?? [];
+
+        getDoctorsList(specializationId: specializationsList?.first?.id);
+
+        emit(HomeState.specializationsSuccess(specializationsList));
       },
       failure: (errorHandler) {
         emit(HomeState.specializationsError(errorHandler));
       },
     );
+  }
+
+  void getDoctorsList({required int? specializationId}) {
+    List<Doctors?>? doctorsList = filterSpecializationListById(
+      specializationId,
+    );
+
+    if (!doctorsList.isNullOrEmpty()) {
+      emit(HomeState.doctorsSuccess(doctorsList));
+    } else {
+      emit(HomeState.doctorsError(ErrorHandler.handle('No Doctos found')));
+    }
+  }
+
+  List<Doctors?>? filterSpecializationListById(specializationId) {
+    return specializationsList
+        ?.firstWhere((specialization) => specialization?.id == specializationId)
+        ?.doctorsList;
   }
 }
