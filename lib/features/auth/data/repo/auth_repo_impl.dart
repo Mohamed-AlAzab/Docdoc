@@ -20,7 +20,7 @@ class AuthRepoImpl implements AuthRepo {
       var result = await _apiService.login(loginRequestBody);
       return ApiResult.success(result);
     } catch (error) {
-      return ApiResult.failure(ErrorHandler.handle(error));
+      return ApiResult.failure(ApiErrorHandler.handle(error));
     }
   }
 
@@ -32,7 +32,7 @@ class AuthRepoImpl implements AuthRepo {
       var result = await _apiService.signup(signUpRequestBody);
       return ApiResult.success(result);
     } catch (error) {
-      return ApiResult.failure(ErrorHandler.handle(error));
+      return ApiResult.failure(ApiErrorHandler.handle(error));
     }
   }
 }

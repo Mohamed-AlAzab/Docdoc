@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_advanced/core/networking/api_error_model.dart';
 import 'package:flutter_advanced/core/networking/api_result.dart';
 import 'package:flutter_advanced/features/auth/data/model/sign_up_request_body.dart';
 import 'package:flutter_advanced/features/auth/domain/auth_repo.dart';
@@ -31,13 +32,13 @@ class SignUpCubit extends Cubit<SignUpState> {
         passwordConfirmation: passwordConfirmationController.text,
         gender: 0,
       ),
-    ); 
+    );
     response.when(
       success: (signUpResponse) {
         emit(SignUpState.success(signUpResponse));
       },
       failure: (error) {
-        emit(SignUpState.error(error: error.apiErrorModel.message ?? ''));
+        emit(SignUpState.error(error));
       },
     );
   }
